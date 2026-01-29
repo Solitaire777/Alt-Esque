@@ -1,3 +1,16 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
+theme = 'Paperesque'
+
+[[params.topmenu]]
+  name = "about"
+  url = "about/"
+
+[[params.topmenu]]
+  name = "contact"
+  url = "contact/"
+
+[[params.topmenu]]
+  name = "rss"
+  url = "posts/index.xml"
