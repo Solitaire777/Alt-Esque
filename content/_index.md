@@ -1,8 +1,6 @@
 +++
-date = '2026-01-29T01:42:58-05:00'
-draft = true
-title = 'Home'
-display_section = 'New Page'
+title = 'Alt+Esque Home'
 +++
-## We need content for this to work
-sample content sample content
+**Salutations!** I am a technology enthusiast and creative using words to enhance my understanding of the topics and projects I delve into.
+
+Within this blog, I look to combine interests in logic, learning, computer systems, and expressions of written language.
