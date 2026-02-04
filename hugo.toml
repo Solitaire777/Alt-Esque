@@ -5,8 +5,9 @@ theme = "shibui"
 enableGitInfo = true
 
 [params.author]
-name = "S. E."
-email = "to be provided"
+  name = "S. E."
+  email = "to be provided"
+
 
 [markup]
   defaultMarkdownHandler = "goldmark"
@@ -20,7 +21,7 @@ email = "to be provided"
     guessSyntax = true
     lineNos = false
     tabWidth = 4
-    style = "rose-pine-moon"
+    style = "witchhazel"
   [markup.tableOfContents]
     startLevel = 2
     endLevel = 4
