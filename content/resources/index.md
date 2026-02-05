@@ -3,7 +3,9 @@ date = '2026-01-29T14:24:59-05:00'
 draft = false
 title = 'Resources'
 +++
-The following are resources I have used for building this blog.
+Resources I use for blogging.
+
+<!--more-->
 
 - For commits -> https://www.conventionalcommits.org/en/v1.0.0/
 - For Markdown reference -> https://spec.commonmark.org/
