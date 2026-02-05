@@ -4,10 +4,6 @@ title = "Alt+Esque"
 theme = "shibui"
 enableGitInfo = true
 
-[params.author]
-  name = "S. E."
-  email = "to be provided"
-
 
 [markup]
   defaultMarkdownHandler = "goldmark"

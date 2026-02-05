@@ -54,7 +54,7 @@ Each of these knob values gets plugged in to base color variables, which contain
 
 It's a *really* convenient way to implement theme colors and one of the things I adore about this theme.
 
-## How-to
+## Adding a CSS-Only Light and Dark Mode to Shibui
 For simplicity's sake, you may just copy-paste this snippet into your `custom.css`. This code creates CSS-Only, automatic light and dark modes by implementing a separate set of hsl "knobs" for dark mode. Simply change the light knob values to tweak the light mode, and change the dark knob values to tweak the dark mode.
 
 **Before setting and forgetting, note that this theme's CSS can conflict with syntax highlighting styles for code blocks. It's easily noticeable when you have a theme that switches from light to dark mode dynamically. I have workarounds for this issue in this snippet and explain more in sections below.**
@@ -97,9 +97,9 @@ root {
 
 
   /* Addresses an issue that causes syntax highlighting to inherit
-    values from main.css in a way that creates text visibility issues 
+    values from main.css in a way that hinders text visibility
     */
-  .highlight *, pre code *, .chroma * {
+  .highlight *, pre code *{
     /* Purges the problematic color variable from syntax highlighting 
     */
     color: unset;
@@ -121,10 +121,17 @@ There is a conflict in the base CSS of this theme that makes some of the text in
   box-sizing: border-box;
 }
 ```
-Syntax highlighting styles[^2] set in the `hugo.toml` config file are strangely inheriting the color property from this wildcard selector. The effect is idiosyncratic. 
-While using a highlight style with a dark background, a code block may camouflage dark text against its dark background when a light theme background is active. Whereas, while using a highlight style with a light background when a dark theme background is active, a code block may camouflage light text against its light background. The effect is not exclusive to a light/dark implementation, but it is more noticeable in one.
+Syntax highlighting styles[^2] set in the `hugo.toml` config file are strangely inheriting the color property from this wildcard selector. 
 
-The code I provided earlier should fix this, but it's important to note that these syntax highlighting styles don't shift dynamically with light and dark modes out of the box. Below, I have a few approaches that could be taken if you wanted code blocks to shift dynamically with light and dark modes.
+Using a light hue for the theme background will generate a near-black `--color-text-primary`. Using a dark hue for the theme background will generate a near-white `--color-text-primary`. This is a desirable and intentional feature, but it has an undesired side-effect due syntax-highlighting styles inheriting from the wildcard selector.
+
+If you have a light theme background and choose a dark syntax highlighting style: Text that inherits `--color-text-primary` is near-black and camouflages on the dark code blocks.
+
+If you have a dark theme background and choose a light syntax highlighting style: Text that inherits `--color-text-primary` is near-white and camouflages on the light code blocks.
+
+ The effect is not exclusive to a light mode/dark mode implementation, but it is more noticeable in one.
+
+The code I provided earlier should fix this, but it's important to note that these syntax-highlighting styles don't shift dynamically with light and dark modes out of the box. Below, I have a few approaches that could be taken if you wanted code blocks to shift dynamically with light and dark modes.
 
 ### Simple
 Set codeFences to false: `codeFences = false` in `hugo.toml`.
@@ -144,7 +151,9 @@ Set codeFences to false: `codeFences = false` in `hugo.toml`.
 This will *disable* syntax highlighting. The styling of code blocks will no longer depend on the language's syntax and the style property. Instead, code blocks will only take on the styles in the theme's CSS. This is easy and allows the code blocks to take on the dynamic light/dark color switching, but it takes some readability out of the code blocks.
 
 
-### Less Simple: Customizing the CSS Highlight Class 
+
+
+### Less Simple: Customizing the CSS Highlight Class
 Hugo allows you to customize syntax highlight styles with CSS files it generates for them.
 You would need to set `noClasses = false` in `hugo.toml`, and then generate the CSS files with hugo commands:
 `hugo gen chromastyles --style=catppuccin-frappe > static/css/syntax.css`
