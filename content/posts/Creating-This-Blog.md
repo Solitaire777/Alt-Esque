@@ -36,9 +36,9 @@ With GDPR having such a strict ruling for Google-hosted fonts, Shibui's choice t
 
 ## What's next?
 A few features I am currently considering adding:
-- ~~Light/dark mode with pure CSS, maybe.~~ Completed!
-- A "Tags" page
-- A Search feature (would require JavaScript)
+- ~~Light/dark mode with pure CSS, maybe.~~ Complete!
+- ~~A "Tags" page~~ Complete!
+- A Search feature (requires JavaScript)
 
 
 
