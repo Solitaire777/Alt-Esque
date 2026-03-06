@@ -10,7 +10,7 @@ Quick links to my projects.
 # Forage Simulations
 Based on real-world, on-the-job tasks.
 - Commonwealth Bank Security Analyst Simulation:
-  - [Part 1](../posts/Commonwealth-Bank-Forage-Simulation/) and [Part 2](../posts/Commonwealth-Bank-Forage-Simulation-Part-2/)
+- [Part 1]({{< relref "posts/Commonwealth-Bank-Forage-Simulation/">}}) and [Part 2]({{< relref "posts/Commonwealth-Bank-Forage-Simulation-Part-2/" >}})
 
 # Project Ideas
 - An inventory tracking app for physical media for home theaters.

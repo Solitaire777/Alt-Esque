@@ -58,4 +58,4 @@ The ACSC (Australian Cybersecurity Centre) didn't actually have any recent passw
 
 ## Related Posts
 The current post is the first part of a 2-part series:
-- [Part 2](../Commonwealth-Bank-Forage-Simulation-Part-2/)
+- [Part 2]({{< relref "posts/Commonwealth-Bank-Forage-Simulation-Part-2/" >}})

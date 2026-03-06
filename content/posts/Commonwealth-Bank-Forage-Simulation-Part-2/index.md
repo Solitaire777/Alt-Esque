@@ -38,5 +38,5 @@ Handing in this report concludes the simulation. Working through this experience
 
 ## Related Posts
 The current post is the second part of a 2-part series:
-- [Part 1](../Commonwealth-Bank-Forage-Simulation/)
+- [Part 1]({{< relref "posts/Commonwealth-Bank-Forage-Simulation/">}})
 
