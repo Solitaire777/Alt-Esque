@@ -9,8 +9,8 @@ This simulation was fairly brief. Rather than go over all of it, I'm going to el
 ## Phishing Attacks!
 Fictional coworkers have been duped by a phishing simulation! With the might of PowerPoint, perhaps they can be educated to spot these attacks in the future.
 
-Though my tone is jovial, there's no overstating the value in user education.
-I created a short PowerPoint covering the following topics:
+In the real world, there's no overstating the value of user education.
+For this task, I created a short PowerPoint covering the following topics:
 - What is phishing?
 - How do we spot phishing?
 - How do we prevent ourselves from being phished?
@@ -22,7 +22,7 @@ Imagine a timeline where state-sponsored terrorists attacked and threatened a ma
 This attack was eventually blamed on North Korean State Actors, though at the time, it smelled like a publicity stunt for Sony's upcoming movie, *The Interview*.
 
 ### Love Bug
-The prospect of romance over email led 10 million people into compromise. Being that it was the 2000's, all this malware really did was give your files a nasty haircut before self-replicating. In addition to causing a historical incident, it also changed Philipino law.
+The prospect of romance over email led 10 million people into compromise when they clicked an attachment in an email headlined with "ILOVEYOU". Being that it was the 2000's, all this malware really did was give your files a nasty haircut before self-replicating. In addition to causing a historical incident, it changed Philipino law.
 
 ### 2017 Attacks of Facebook and Google
 A guy sent invoices to Facebook and Google for over $100m... ***and they paid him***.

@@ -47,7 +47,6 @@ Two things are left for me to reflect on.
 Task Two poses a scenario where your colleagues have fallen victim to a phishing attack that deposits ransomware onto their machines.
 It asks a few questions about the incident response process and how to apply it to the situation.
 
-A simple exercise in theory, it didn't give me any cool, hands-on problems to dig into. Still, it's fun to write short, research-based essays (for me, anyway)!
 
 ## Task Three: Password Security and ACSC (Australian Cyber Security Centre)
 This one involves communication with non-technical folks. It's just the sort of thing I love, and no, that's not a joke!
