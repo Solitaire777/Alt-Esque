@@ -5,11 +5,24 @@ title = 'Tauri Media Management App'
 tags = ['rust', 'programming']
 
 +++
-# Idea
+## Idea
 The purpose of this project is to create a self-hosted, unified library of a person's owned physical media (cds, vinyl, dvds and blu-ray).
 This comes from watching home-theater/audio enthusiasts struggle to catalog all of the physical media they own and remember where each item is. The go-to solution was an Excel spreadsheet, which sort of works, but isn't query-friendly and gets unweildy as listings grow.
-In no way does this idea try to compete with Discogs. It isn't supposed to be network-reliant, and all of the data is to live on one's local machine.
-# Requirements Gathering
+
+Here's a proper user story:
+
+>As a forgetful home theater enthusiast, I want to document and query my physical media, so that I can avoid purchasing duplicates.
+
+And another:
+
+>As a fastidious home theater enthusiast with a vast collection, I want to document the location of my media, so that I know where all of my media is at all times.
+
+And another:
+
+>As a physical media enthusiast, I want to track and organize my physical media collection in a locally-administered way, so that I can manage my media without opting in to a live service.
+
+I'll circle back to UX/UI concepts *after* handling some more back-end because I find that handling front-end design after back-end is more efficient for me when I work on a full-stack project alone.
+## Requirements Gathering
 A brief list of design requirements:
 - Locally hosted
 - Ability to query
@@ -18,20 +31,22 @@ A brief list of design requirements:
 - UI that doesn't look like Tailwinds
 - Lightweight application
 - Portability (can export, and import data in standard formats for exchange between systems and services)
-- API integration to port metadata from external sources (Discogs and that one movie db. I'll remember the name at some point) without relying on network access to work
+- Metadata that supports querying
+- Customizable user-added metadata
+- (Optional) API integration to port metadata from external sources
 
-# Database Design
+## Database Design
 This is the preliminary design for the database. The idea is to compose each media of a base set of universal characteristics plus its type-specific characteristics.
 
 ![Work-in-progress database design, made in dbdiagram.io](media-db-v1-1.svg)
 
 The overarching principle with this design is extensability.
 
-# Entering data
+## Entering data
 I made this sequence diagram just to have something to reference, though this interaction sequence isn't complex at all
 ![Entering media sequence diagram made in sequencediagram.org](entry-sequence.svg)
 
-# General plan
+## General plan
 The current plan is to focus on features iteratively
 1. Foundational
 - Basic Tauri app
@@ -53,7 +68,7 @@ The current plan is to focus on features iteratively
 - Statistics dashboard
 - Values for vinyl?
 
-# Tauri Project Structure
+## Tauri Project Structure
 Claude drafted this up for me and I'm keeping it for my records.
 
 ```goat
@@ -78,9 +93,9 @@ media-vault/          ← whatever you want to call the app
     │   └── shared/           ← reusable components
 ```
 Notes to self:
-- Migrations folder allows a schema to evolve over time by adding new migration files. Sounds nicer than the SQLite/ORM implementation I have worked with in the past (Android + The Room).
-- The commands folder can be used to implement features via tauri commands. Ex: CRUD, search, filtering, exporting, etc. Commands should do as little logic as possible, calling into data query layers. Commands should also have robust error handling.
-- Features is a good place to put the main sections.
+- The "migrations" folder allows a schema to evolve over time by adding new migration files.
+- The "commands" folder can be used to implement features via tauri commands. Ex: CRUD, search, filtering, exporting, etc. Commands should do as little logic as possible, calling into data query layers. Commands should also have robust error handling.
+- The "features" folder is a good place to put the main sections.
 
 ## Rust Backend Layers:
 ```goat

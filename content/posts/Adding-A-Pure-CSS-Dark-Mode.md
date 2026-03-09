@@ -5,7 +5,7 @@ tags = ["meta", "code"]
 title = 'Adding a Pure CSS Dark Mode'
 +++
 
-My eyes are only a little less displeased with bright white sites than they are with direct sunlight. To support my own preferences, and to flatter myself with the idea that someone else will visit this page, I'll demonstrate how I added a CSS-Only dark and light mode to this theme using the `light-dark()` function.
+My eyes are only a little less displeased with bright white sites than they are with direct sunlight. To support my own preferences, I'll demonstrate how I added a CSS-Only dark and light mode to this theme using the `light-dark()` function.
 
 ## CSS light-dark()
 `light-dark()` is broadly supported in modern browsers. It allows two different colors to be declared for the same CSS color property within the parentheses of the function, separated by a comma. Presumably, the developer places the light value first, and the dark value second. Then, the browser renders either the light OR the dark values based on the preferences on the user's machine. Example from MDN docs [^1]:
